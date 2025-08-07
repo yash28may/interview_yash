@@ -39,3 +39,9 @@ swatches.forEach((swatch, index) => {
     price.textContent = productData[index].price;
   });
 });
+
+const addToCartBtn = document.getElementById("add-to-cart");
+
+addToCartBtn.addEventListener("click", () => {
+  alert("Hello Clothzy");
+});
