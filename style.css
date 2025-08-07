@@ -8,8 +8,11 @@ html,body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   box-sizing: border-box;
   min-height: 100vh;
+  flex-direction: column;
+  overflow-x: hidden;
   overflow-x: hidden; /* ✅ hide horizontal scrollbar */
   overflow-y: auto;
 }
@@ -23,13 +26,10 @@ html,body {
   padding: 24px;
   text-align: center;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 16px;
   transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-  transform: scale(1.02);
 }
 
 .flex{
@@ -39,9 +39,11 @@ html,body {
   flex-direction: column;
 }
 
-
 .image-container {
   width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
   height: 100%; /* Set fixed height */
   overflow: hidden;
   display: flex;
@@ -104,8 +106,10 @@ button {
   background-color: #000;
   color: white;
   border: none;
+  padding: 12px;
   border-radius: 6px;
   font-size: 1rem;
+  border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -113,6 +117,7 @@ button {
 button:hover {
   background-color: #333;
 }
+
 
 @media (max-width: 450px) {
   .product-card {
@@ -126,4 +131,5 @@ button:hover {
   button {
     width: 100%;
   }
+
 }
