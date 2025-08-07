@@ -1,30 +1,41 @@
-const colorButtons = document.querySelectorAll('.color-option');
-const productImage = document.getElementById('product-img');
-const priceDisplay = document.getElementById('price');
+// script.js
 
-const productDetails = {
-  red: {
-    image: './images/top-red.jpg',
-    price: 499
+const productData = [
+  {
+    color: "Red",
+    image: "./images/red shirt.webp",
+    price: "Rs 999"
   },
-  green: {
-    image: './images/top-green.jpg',
-    price: 549
+  {
+    color: "Blue",
+    image: "./images/blue shirt.avif",
+    price: "Rs 1049"
   },
-  blue: {
-    image: './images/top-blue.png',
-    price: 599
+  {
+    color: "Green",
+    image: "./images/green shirt.webp",
+    price: "Rs 1099"
   }
-};
+];
 
-colorButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const selectedColor = button.getAttribute('data-color');
-    
-    // Update image
-    productImage.src = productDetails[selectedColor].image;
-    
-    // Update price
-    priceDisplay.textContent = productDetails[selectedColor].price;
+const swatches = document.querySelectorAll(".color-swatch");
+const image = document.getElementById("product-image");
+const price = document.getElementById("product-price");
+
+swatches.forEach((swatch, index) => {
+  swatch.addEventListener("click", () => {
+    // Remove previous selection
+    swatches.forEach(s => {
+      s.classList.remove("selected");
+      s.setAttribute("aria-checked", "false");
+    });
+
+    // Add selected class
+    swatch.classList.add("selected");
+    swatch.setAttribute("aria-checked", "true");
+
+    // Update image and price
+    image.src = productData[index].image;
+    price.textContent = productData[index].price;
   });
 });
