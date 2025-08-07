@@ -1,0 +1,57 @@
+/* style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.product-card {
+  max-width: 300px;
+  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 0 10px #ccc;
+}
+
+
+figure{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.color-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.color-swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.color-swatch.red { background-color: red; }
+.color-swatch.blue { background-color: blue; }
+.color-swatch.green { background-color: green; }
+
+.color-swatch.selected {
+  border-color: black;
+  box-shadow: 0 0 5px #000;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

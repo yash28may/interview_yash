@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic Product Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section class="product-card">
+    <article>
+      <figure>
+        <img id="product-image" src="./images/red shirt.webp"  alt="Product Image" width="200">
+        <figcaption id="product-name">Stylish Shirt</figcaption>
+      </figure>
+
+      <h2>Stylish Shirt</h2>
+      <p id="product-price">Rs 999</p>
+
+      <!-- Color Swatches -->
+      <div class="color-options" role="radiogroup" aria-label="Choose a color">
+        <div class="color-swatch red selected" 
+             role="radio" 
+             aria-checked="true" 
+             tabindex="0" 
+             aria-label="Red" 
+             data-index="0">
+        </div>
+
+        <div class="color-swatch blue" 
+             role="radio" 
+             aria-checked="false" 
+             tabindex="0" 
+             aria-label="Blue" 
+             data-index="1">
+        </div>
+
+        <div class="color-swatch green" 
+             role="radio" 
+             aria-checked="false" 
+             tabindex="0" 
+             aria-label="Green" 
+             data-index="2">
+        </div>
+      </div>
+
+      <button>Add to Cart</button>
+    </article>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
