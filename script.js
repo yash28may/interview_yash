@@ -3,17 +3,17 @@
 const productData = [
   {
     color: "Red",
-    image: "./images/red shirt.webp",
+    image: "./images/red-shirt.webp",
     price: "Rs 999"
   },
   {
     color: "Blue",
-    image: "./images/blue shirt.avif",
+    image: "./images/blue-shirt.avif",
     price: "Rs 1049"
   },
   {
     color: "Green",
-    image: "./images/green shirt.webp",
+    image: "./images/green-shirt.webp",
     price: "Rs 1099"
   }
 ];

@@ -1,34 +1,37 @@
 /* style.css */
 
-body {
-  font-family: 'Segoe UI', sans-serif;
+html, body {
   margin: 0;
-  padding: 40px 20px;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #ece9e6, #ffffff);
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  overflow: hidden; /* ✅ removes scrollbars */
 }
+
 
 .product-card {
   background-color: #ffffff;
-  width: 100%;
   max-width: 380px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   padding: 24px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  transition: transform 0.3s ease;
+  gap: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
 }
 
 .product-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
-
 .flex{
   display: flex;
   justify-content: center;
@@ -39,10 +42,11 @@ body {
 
 .image-container {
   width: 100%;
-  height: 300px; /* Set fixed height */
+  height: 280px;
+  border-radius: 12px;
   overflow: hidden;
+  background: #f5f5f5;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -50,25 +54,25 @@ body {
 .image-container img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Prevents distortion */
+  object-fit: contain;
   transition: opacity 0.3s ease;
 }
+
 
 .color-options {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 12px;
-  margin-top: 12px;
+  margin-top: 10px;
 }
-
 .color-swatch {
   width: 34px;
   height: 34px;
   border-radius: 50%;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: border-color 0.3s, transform 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .color-swatch.red { background-color: #e53935; }
@@ -82,8 +86,8 @@ body {
 .color-swatch.selected {
   border-color: #000;
   box-shadow: 0 0 6px rgba(0,0,0,0.4);
+  transform: scale(1.1);
 }
-
 h2 {
   font-size: 1.4rem;
   color: #333;
@@ -97,19 +101,21 @@ p {
 
 button {
   margin-top: 12px;
-  padding: 10px 20px;
-  background-color: #000;
+  padding: 12px 20px;
+  background: linear-gradient(to right, #000, #333);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #333;
+  background: linear-gradient(to right, #333, #000);
+  transform: scale(1.05);
 }
+
 
 @media (max-width: 450px) {
   .product-card {
