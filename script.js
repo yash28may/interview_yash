@@ -3,17 +3,17 @@
 const productData = [
   {
     color: "Red",
-    image: "./images/red shirt.webp",
+    image: "./images/red-shirt.webp",
     price: "Rs 999"
   },
   {
     color: "Blue",
-    image: "./images/blue shirt.avif",
+    image: "./images/blue-shirt.avif",
     price: "Rs 1049"
   },
   {
     color: "Green",
-    image: "./images/green shirt.webp",
+    image: "./images/green-shirt.webp",
     price: "Rs 1099"
   }
 ];
@@ -38,4 +38,10 @@ swatches.forEach((swatch, index) => {
     image.src = productData[index].image;
     price.textContent = productData[index].price;
   });
+});
+
+const addToCartBtn = document.getElementById("add-to-cart");
+
+addToCartBtn.addEventListener("click", () => {
+  alert("Hello Clothzy");
 });
