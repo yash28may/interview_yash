@@ -1,53 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dynamic Product Card</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Girls Top Product Card</title>
+  <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
 
-  <section class="product-card">
-    <article class="flex">
-      <figure class="image-container">
-        <img id="product-image" src="./images/red-shirt.webp"  alt="Product Image" width="200">
+  <main class="product-wrapper">
+    <article class="product-card">
+      
+      <figure class="product-img">
+        <img id="product-img" src="./images/top-red.jpg" alt="Red Top">
       </figure>
 
-      <h2>Stylish Shirt</h2>
-      <p id="product-price">Rs 999</p>
+      <section class="product-info">
+        <h1 class="product-title">Stylish Girls Top</h1>
+        <p class="product-description">
+          Trendy and comfortable girls top made with soft cotton fabric. Perfect for casual wear.
+        </p>
 
-      <!-- Color Swatches -->
-      <div class="color-options" role="radiogroup" aria-label="Choose a color">
-        <div class="color-swatch red selected" 
-             role="radio" 
-             aria-checked="true" 
-             tabindex="0" 
-             aria-label="Red" 
-             data-index="0">
+        <p class="product-price">Price: ₹<span id="price">499</span></p>
+
+        <div class="color-select">
+          <label>Choose Color:</label>
+          <div class="color-buttons">
+            <button class="color-option" data-color="red"></button>
+            <button class="color-option" data-color="green"></button>
+            <button class="color-option" data-color="blue"></button>
+          </div>
         </div>
 
-        <div class="color-swatch blue" 
-             role="radio" 
-             aria-checked="false" 
-             tabindex="0" 
-             aria-label="Blue" 
-             data-index="1">
-        </div>
-
-        <div class="color-swatch green" 
-             role="radio" 
-             aria-checked="false" 
-             tabindex="0" 
-             aria-label="Green" 
-             data-index="2">
-        </div>
-      </div>
-
-   <button class="btn-add" id="add-to-cart">Add to Cart</button>
+        <button class="cart-button">Add to Cart</button>
+      </section>
     </article>
-  </section>
+  </main>
 
-  <script src="script.js"></script>
+  <script src="script1.js"></script>
 </body>
 </html>
