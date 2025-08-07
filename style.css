@@ -1,135 +1,116 @@
-/* style.css */
-
-html,body {
-  font-family: 'Segoe UI', sans-serif;
+* {
   margin: 0;
-  padding: 40px 20px;
-  background: linear-gradient(to right, #ece9e6, #ffffff);
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f4f4f4, #fff);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
   min-height: 100vh;
-  flex-direction: column;
-  overflow-x: hidden;
-  overflow-x: hidden; /* ✅ hide horizontal scrollbar */
-  overflow-y: auto;
+  padding: 20px;
 }
 
 .product-card {
-  background-color: #ffffff;
   width: 100%;
-  max-width: 380px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  padding: 24px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 16px;
-  transition: transform 0.3s ease;
-}
-
-.flex{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.image-container {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  height: 100%; /* Set fixed height */
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
 }
 
 .image-container img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* Prevents distortion */
-  transition: opacity 0.3s ease;
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  text-align: center;
+  color: #222;
+}
+
+#product-price {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+  color: green;
+  font-size: 1.1rem;
 }
 
 .color-options {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 12px;
+  margin-bottom: 15px;
 }
 
 .color-swatch {
-  width: 34px;
-  height: 34px;
+  width: 25px;
+  height: 25px;
+  margin: 0 8px;
   border-radius: 50%;
-  border: 2px solid transparent;
+  border: 2px solid #ccc;
   cursor: pointer;
-  transition: border-color 0.3s, transform 0.3s;
-}
-
-.color-swatch.red { background-color: #e53935; }
-.color-swatch.blue { background-color: #1e88e5; }
-.color-swatch.green { background-color: #43a047; }
-
-.color-swatch:hover {
-  transform: scale(1.1);
+  transition: border 0.3s ease;
 }
 
 .color-swatch.selected {
-  border-color: #000;
-  box-shadow: 0 0 6px rgba(0,0,0,0.4);
+  border: 3px solid #000;
 }
 
-h2 {
-  font-size: 1.4rem;
-  color: #333;
+.color-swatch.red {
+  background-color: red;
 }
 
-p {
-  margin: 6px 0;
-  font-size: 1rem;
-  color: #555;
+.color-swatch.blue {
+  background-color: blue;
 }
 
-button {
-  margin-top: 12px;
+.color-swatch.green {
+  background-color: green;
+}
+
+.btn-add {
+  display: block;
+  margin: auto;
   padding: 10px 20px;
-  background-color: #000;
-  color: white;
+  background: black;
+  color: #fff;
   border: none;
-  padding: 12px;
-  border-radius: 6px;
-  font-size: 1rem;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
   transition: background 0.3s ease;
 }
 
-button:hover {
-  background-color: #333;
+.btn-add:hover {
+  background: #333;
 }
 
-
-@media (max-width: 450px) {
-  .product-card {
-    padding: 16px;
-  }
-
+/* Responsive Fix */
+@media (max-width: 480px) {
   h2 {
     font-size: 1.2rem;
   }
 
-  button {
-    width: 100%;
+  #product-price {
+    font-size: 1rem;
   }
 
+  .color-swatch {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+  }
+
+  .btn-add {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 }

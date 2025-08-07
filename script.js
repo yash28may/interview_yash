@@ -1,9 +1,7 @@
-// script.js
-
 const productData = [
   {
     color: "Red",
-    image: "./images/red shirt.webp",
+    image: "./images/red-shirt.webp",
     price: "Rs 999"
   },
   {
@@ -38,7 +36,6 @@ swatches.forEach((swatch, index) => {
     image.src = productData[index].image;
     price.textContent = productData[index].price;
   });
-
 });
 
 const addToCartBtn = document.getElementById("add-to-cart");
