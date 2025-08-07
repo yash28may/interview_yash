@@ -1,57 +1,126 @@
 /* style.css */
 
 body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .product-card {
-  max-width: 300px;
-  margin: auto;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 16px;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 24px;
   text-align: center;
-  box-shadow: 0 0 10px #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 
-figure{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.image-container {
+  width: 100%;
+  height: 300px; /* Set fixed height */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Prevents distortion */
+  transition: opacity 0.3s ease;
 }
 
 .color-options {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin: 15px 0;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
 }
 
 .color-swatch {
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: 0.3s;
+  transition: border-color 0.3s, transform 0.3s;
 }
 
-.color-swatch.red { background-color: red; }
-.color-swatch.blue { background-color: blue; }
-.color-swatch.green { background-color: green; }
+.color-swatch.red { background-color: #e53935; }
+.color-swatch.blue { background-color: #1e88e5; }
+.color-swatch.green { background-color: #43a047; }
+
+.color-swatch:hover {
+  transform: scale(1.1);
+}
 
 .color-swatch.selected {
-  border-color: black;
-  box-shadow: 0 0 5px #000;
+  border-color: #000;
+  box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #555;
 }
 
 button {
+  margin-top: 12px;
   padding: 10px 20px;
-  background-color: black;
+  background-color: #000;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+@media (max-width: 450px) {
+  .product-card {
+    padding: 16px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    width: 100%;
+  }
 }
